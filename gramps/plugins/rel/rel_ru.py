@@ -333,7 +333,7 @@ class Ancestor(Direct):
                 {  # by in_law_a
                     True: {  # by gender_a
                         Person.MALE: ["тесть", "тестя"],
-                        Person.FEMALE: ["свёкор", "свёкора"],
+                        Person.FEMALE: ["свёкор", "свёкра"],
                     },
                 },
             ],
@@ -365,7 +365,7 @@ class Ancestor(Direct):
                 {  # by in_law_a
                     True: {  # by gender_a
                         Person.MALE: ["тесть или тёща", "тестя или тёщи"],
-                        Person.FEMALE: ["свёкор или свекровь", "свёкора или свекрови"],
+                        Person.FEMALE: ["свёкор или свекровь", "свёкра или свекрови"],
                     },
                 },
             ],
@@ -915,7 +915,7 @@ class Senior(Collateral):
 
     stereotyped_plurals = [
         [None, None],
-        ["{}дяди и тёти", "{}дядей и тётей"],
+        ["{}дяди и тёти", "{}дядей и тёть"],
         ["{}дедушки и бабушки", "{}дедушек и бабушек"],
     ]
 
