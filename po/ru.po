@@ -5714,7 +5714,7 @@ msgstr "Выбирает детей соответствующих фильтр�
 
 #: ../gramps/gen/filters/rules/person/_isdefaultperson.py:54
 msgid "Home Person"
-msgstr "Базовое лицо"
+msgstr "Я (точка отсчёта)"
 
 #: ../gramps/gen/filters/rules/person/_isdefaultperson.py:56
 msgid "Matches the Home Person"
@@ -7098,15 +7098,15 @@ msgstr "Усыновлённый"
 
 #: ../gramps/gen/lib/childreftype.py:76
 msgid "Stepchild"
-msgstr "Пасынок/Падчерица"
+msgstr "Сводное родство"
 
 #: ../gramps/gen/lib/childreftype.py:77
 msgid "Sponsored"
-msgstr "Опекаемый"
+msgstr "Опекунство"
 
 #: ../gramps/gen/lib/childreftype.py:78
 msgid "Foster"
-msgstr "Воспитанник"
+msgstr "Воспитание"
 
 #: ../gramps/gen/lib/citation.py:106 ../gramps/gen/lib/notetype.py:90
 #: ../gramps/gui/clipboard.py:481 ../gramps/gui/configure.py:810
@@ -7821,7 +7821,7 @@ msgstr "Иное"
 
 #: ../gramps/gen/lib/eventtype.py:199
 msgid "Adopted"
-msgstr "Усыновлённый"
+msgstr "Усыновление"
 
 #: ../gramps/gen/lib/eventtype.py:200 ../gramps/gen/utils/symbols.py:93
 #: ../gramps/gui/configure.py:2797 ../gramps/gui/merge/mergeperson.py:205
@@ -8587,7 +8587,7 @@ msgstr "Полное Имя"
 
 #: ../gramps/gen/lib/name.py:180 ../gramps/plugins/importer/importcsv.py:206
 msgid "Given name"
-msgstr "Настоящее имя"
+msgstr "Имя"
 
 #: ../gramps/gen/lib/name.py:184 ../gramps/plugins/webreport/basepage.py:2058
 #: ../gramps/plugins/webreport/basepage.py:2116
@@ -12537,7 +12537,7 @@ msgstr "Имя и ID активного лица"
 #: ../gramps/gui/configure.py:1645
 #: ../gramps/plugins/textreport/indivcomplete.py:394
 msgid "Relationship to home person"
-msgstr "Отношение к базовому лицу"
+msgstr "Кем приходится мне"
 
 #: ../gramps/gui/configure.py:1656
 msgid "Status bar"
@@ -15278,7 +15278,7 @@ msgstr "Установить активное лицо"
 
 #: ../gramps/gui/editors/editperson.py:787
 msgid "Make Home Person"
-msgstr "Установить базовое лицо"
+msgstr "Сделать точкой отсчёта"
 
 #: ../gramps/gui/editors/editperson.py:906
 msgid "Problem changing the gender"
@@ -20917,7 +20917,7 @@ msgstr "Нельзя создать закладку: никто не выдел
 
 #: ../gramps/gui/views/navigationview.py:323
 msgid "No Home Person"
-msgstr "Базовое лицо не назначено"
+msgstr "Точка отсчёта не выбрана"
 
 #: ../gramps/gui/views/navigationview.py:325
 msgid ""
@@ -25365,7 +25365,7 @@ msgstr ""
 
 #: ../gramps/plugins/gramplet/whatsnext.py:162
 msgid "No Home Person set."
-msgstr "Базовое лицо не назначено."
+msgstr "Точка отсчёта не выбрана."
 
 #: ../gramps/plugins/gramplet/whatsnext.py:345
 msgid "first name unknown"
@@ -31433,7 +31433,7 @@ msgstr "Редактор фильтров людей"
 #: ../gramps/plugins/lib/libpersonview.py:381
 #: ../gramps/plugins/view/pedigreeview.py:1781
 msgid "Set _Home Person"
-msgstr "У_становить базовое лицо"
+msgstr "Сделать точкой отсчёта"
 
 #: ../gramps/plugins/lib/libpersonview.py:286
 #: ../gramps/plugins/view/fanchartview.py:184
