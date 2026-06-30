@@ -401,7 +401,10 @@ class NameDisplay:
             (
                 Name.LNFNP,
                 _("Main Surnames, Given Patronymic Suffix Prefix"),
-                "%1m %2m %o" + COMMAGLYPH + " %f %1y %s %0m",
+                # Downstream: drop COMMAGLYPH so LNFNP renders Russian ФИО
+                # ("Surname Given Patronymic") without a comma everywhere the
+                # name displayer is used (this format is our configured default).
+                "%1m %2m %o" + " %f %1y %s %0m",
                 _ACT,
             ),
             # DEPRECATED FORMATS
