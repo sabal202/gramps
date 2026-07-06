@@ -39,6 +39,21 @@ import gramps.gen.relationship
 # -------------------------------------------------------------------------
 
 
+def _norm_gender(gender):
+    """Map Person.OTHER to Person.UNKNOWN for kinship-term lookups.
+
+    The Russian relationship tables are keyed only by MALE / FEMALE / UNKNOWN.
+    Person.OTHER is a valid Gramps gender with no dedicated Russian kinship
+    term, and an unguarded ``dict[Person.OTHER]`` lookup raises KeyError deep in
+    the descriptive fallback, which then interpolates a bare ``None`` into the
+    result string (e.g. "None матери супруга/супруги"). Russian has no
+    other-gender kin word, so the unknown-gender phrasing ("дядя или тётя") is
+    the correct generic fallback. Normalising at the two public entry points
+    propagates the safe value to every internal table lookup.
+    """
+    return Person.UNKNOWN if gender == Person.OTHER else gender
+
+
 _spouses = {  # by a gender of the spouse
     Person.MALE: ["муж", "мужа"],
     Person.FEMALE: ["жена", "жены"],
@@ -1400,6 +1415,8 @@ class RelationshipCalculator(gramps.gen.relationship.RelationshipCalculator):
         in_law_a=False,
         in_law_b=False,
     ):
+        gender_a = _norm_gender(gender_a)
+        gender_b = _norm_gender(gender_b)
         self._Ga = Ga
         self._Gb = Gb
         self._gender_a = gender_a
@@ -1426,6 +1443,8 @@ class RelationshipCalculator(gramps.gen.relationship.RelationshipCalculator):
     def get_sibling_relationship_string(
         self, sib_type, gender_a, gender_b, in_law_a=False, in_law_b=False
     ):
+        gender_a = _norm_gender(gender_a)
+        gender_b = _norm_gender(gender_b)
         self._Ga = 1
         self._Gb = 1
         self._gender_a = gender_a
